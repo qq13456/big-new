@@ -42,3 +42,10 @@ $.ajaxPrefilter(function (config) {
     }
   }
 })
+
+/**
+ * 仓库：https://github.com/zlc1000/big_news51.git
+ *
+ * home分支: git add .  -> git commit -m '完成了登录和注册功能' -> git push
+ * git checkout mater -> git merge home -> git push
+ * git checkout -b index -> 再继续开发首页的功能就好了*/
