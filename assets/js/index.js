@@ -22,9 +22,10 @@ function getUserInfo() {
 }
 
 const renderAvatar = (res) => {
-  if (res.user_pic) {
+  if (res.data.user_pic) {
     $('.text-avatar').hide()
-    $('.user-box img').css('src', res.user_pic).show()
+    // attr prop 适用于对属性的操作
+    $('.user-box img').attr('src', res.data.user_pic).show()
   } else {
     $('.layui-nav-img').hide()
     // 显示文字头像，取username属性的第一个字母
@@ -62,3 +63,11 @@ $('#btnLogout').on('click', function () {
     }
   )
 })
+
+// 问题：你在切换分支的时候：git checkout home
+// 如果你切的分支名称和你工程里面某个文件夹的名称一致了，人家给一个报警提示
+// git checkout home --      (说明：命令后面加一个 --)
+
+// 获取用户信息，报错状态码 401，就是token问题（要么你没给，要么就是过期了）
+
+// 首页是已经处于登录状态的人，才能够访问到的（权限）
