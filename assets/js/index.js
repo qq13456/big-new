@@ -24,12 +24,9 @@ function getUserInfo() {
 const renderAvatar = (res) => {
   if (res.data.user_pic) {
     $('.text-avatar').hide()
-<<<<<<< HEAD
     $('.user-box img').attr('src', res.user_pic).show()
-=======
     // attr prop 适用于对属性的操作
     $('.user-box img').attr('src', res.data.user_pic).show()
->>>>>>> cate
   } else {
     $('.layui-nav-img').hide()
     // 显示文字头像，取username属性的第一个字母
